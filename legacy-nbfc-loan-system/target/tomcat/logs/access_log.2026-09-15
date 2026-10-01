@@ -1,9 +1,0 @@
-0:0:0:0:0:0:0:1 - - [15/Sep/2026:16:57:01 +0530] "GET /nbfc HTTP/1.1" 302 - http-bio-8080-exec-1 0
-0:0:0:0:0:0:0:1 - - [15/Sep/2026:16:57:01 +0530] "GET /nbfc/ HTTP/1.1" 200 11007 http-bio-8080-exec-2 91
-0:0:0:0:0:0:0:1 - - [15/Sep/2026:16:57:01 +0530] "GET /nbfc/css/style.css;jsessionid=09AE9B8EE2EAEEF82F15CF06BED4FDE6 HTTP/1.1" 200 9042 http-bio-8080-exec-3 5
-0:0:0:0:0:0:0:1 - - [15/Sep/2026:16:57:01 +0530] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-4 0
-0:0:0:0:0:0:0:1 - - [15/Sep/2026:17:00:03 +0530] "GET /nbfc HTTP/1.1" 302 - http-bio-8080-exec-1 0
-0:0:0:0:0:0:0:1 - - [15/Sep/2026:17:00:03 +0530] "GET /nbfc/ HTTP/1.1" 200 10875 http-bio-8080-exec-2 393
-0:0:0:0:0:0:0:1 - - [15/Sep/2026:17:00:03 +0530] "GET /nbfc/css/style.css HTTP/1.1" 200 9042 http-bio-8080-exec-3 9
-0:0:0:0:0:0:0:1 - - [15/Sep/2026:17:00:35 +0530] "POST /nbfc/loan HTTP/1.1" 200 4804 http-bio-8080-exec-4 128
-0:0:0:0:0:0:0:1 - - [15/Sep/2026:17:05:13 +0530] "GET /nbfc/ HTTP/1.1" 200 10875 http-bio-8080-exec-6 4
