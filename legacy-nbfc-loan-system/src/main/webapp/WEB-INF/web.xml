@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>NBFC Loan Eligibility System</display-name>
+    <description>Legacy NBFC Loan Eligibility Web Application - Version 1.0</description>
+
+    <!-- Application Initialization Parameters -->
+    <context-param>
+        <param-name>db.name</param-name>
+        <param-value>nbfc_loan.db</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>app.name</param-name>
+        <param-value>NBFC Loan Eligibility System</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>app.version</param-name>
+        <param-value>1.0.0</param-value>
+    </context-param>
+
+    <!-- Database Initializer Listener -->
+    <listener>
+        <listener-class>com.nbfc.loan.util.DatabaseInitializer</listener-class>
+    </listener>
+
+    <!-- Servlet Declarations -->
+
+    <servlet>
+        <servlet-name>LoanServlet</servlet-name>
+        <servlet-class>com.nbfc.loan.servlet.LoanServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ApplicationListServlet</servlet-name>
+        <servlet-class>com.nbfc.loan.servlet.ApplicationListServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ApplicationDetailServlet</servlet-name>
+        <servlet-class>com.nbfc.loan.servlet.ApplicationDetailServlet</servlet-class>
+        <load-on-startup>3</load-on-startup>
+    </servlet>
+
+    <!-- Servlet Mappings -->
+
+    <servlet-mapping>
+        <servlet-name>LoanServlet</servlet-name>
+        <url-pattern>/loan</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ApplicationListServlet</servlet-name>
+        <url-pattern>/applications</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ApplicationDetailServlet</servlet-name>
+        <url-pattern>/application/detail</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome Files -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Error Pages -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/jsp/error404.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/jsp/error500.jsp</location>
+    </error-page>
+
+    <!-- Session Configuration -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+</web-app>

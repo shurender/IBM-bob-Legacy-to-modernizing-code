@@ -1,0 +1,46 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.*
+@"
+.toolchains/
+node_modules/
+dist/
+*.db-shm
+*.db-wal
+"@ | Out-File -Encoding utf8 .gitignore
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node and frontend build artifacts
+node_modules/
+dist/
+build/
+.vite/
+*.tsbuildinfo
+
+# Local databases and runtime files
+*.sqlite
+*.sqlite3
+*.db
+*.log
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
