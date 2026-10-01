@@ -1,3 +1,4 @@
+
 -- NBFC Loan Eligibility System - Database Schema
 -- SQLite Database: nbfc_loan.db
 -- Version: 1.0 | 2010
